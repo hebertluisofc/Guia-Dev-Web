@@ -1,138 +1,156 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <title>Guia Dev Web</title>
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
-    <title>Projeto</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="dark-mode">
+
+    <!-- Header / Navbar -->
     <header>
-        <!-- NAV BAR -->
-        <nav class="navbar-dark bg-dark">
-            <div class="nav-bar">
-                <a class="navbar-brand" href="#">
-                    <img id="logo" src="Images/GuiaDevWeb.png" alt="Logomarca Guia Dev Web" width="150rem"/>
+        <nav class="navbar fixed-top navbar-dark bg-dark shadow">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Images/GuiaDevWeb.png" alt="Logomarca Guia Dev Web" width="120">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
+
+                <div class="d-flex align-items-center">
+                    <!-- Botão alternar tema -->
+                    <button id="theme-toggle" class="btn btn-outline-light me-2">🌙</button>
+
+                    <!-- Navbar toggler -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Offcanvas -->
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Guia Dev Web</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+                        <h5>&lt;GuiaDevWeb&gt;</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#intro">Desenvolvimento Web</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">HTML 5</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">CSS 3</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Java Script</a>
-                            </li>
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#intro">Desenvolvimento Web</a></li>
+
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Contato
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    HTML
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#html-intro">Introdução</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#html">Mini Site</a></li>
                                 </ul>
                             </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    CSS
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#css-intro">Introdução</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#css">Mini Site</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    JavaScript
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#js-intro">Introdução</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#js">Mini Site</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link active" href="#newsletter">Newsletter</a></li>
+
                         </ul>
+
                         <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-success" type="submit">Search</button>
+                            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                            <button class="btn btn-success" type="submit">Buscar</button>
                         </form>
                     </div>
                 </div>
             </div>
         </nav>
-        <!-- FIM DA NAV BAR -->
     </header>
 
-    <main>
-        <!-- CARROSSEL -->
-        <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+    <!-- Main -->
+    <main class="mt-5 pt-4">
+        <!-- Carrossel -->
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade mb-5">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                    class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="Images/CSS.png" class="d-block w-100" alt="CSS">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption text-dark bg-light bg-opacity-50 rounded">
                         <h5>CSS 3</h5>
                         <p>O estilo que transforma ideias em design.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="Images/HTML.png" class="d-block w-100" alt="HTML">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption text-dark bg-light bg-opacity-50 rounded">
                         <h5>HTML 5</h5>
-                        <p>A estrutura invisível que sustenta a web.</p>
+                        <p>A estrutura invisível que sustenta a Web.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="Images/JS.png" class="d-block w-100" alt="JS">
-                    <div style="color: black;" class="carousel-caption d-none d-md-block">
-                        <h5>JAVA SCRIPT</h5>
+                    <img src="Images/JS.png" class="d-block w-100" alt="JavaScript">
+                    <div class="carousel-caption text-dark bg-light bg-opacity-50 rounded">
+                        <h5>JavaScript</h5>
                         <p>O motor da interatividade online.</p>
                     </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="carousel-control-prev-icon"></span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon"></span>
             </button>
         </div>
-        <!-- FIM DO CARROSSEL -->
 
-        <!-- Seção Desenvolvimento Web -->
-        <section id="intro" class="intro">
+        <!-- Seção Introdução -->
+        <section id="intro" class="intro container">
             <article>
                 <h2>O que é o Desenvolvimento Web?</h2>
                 <p>
                     O desenvolvimento web é a área responsável pela criação e manutenção de sites e aplicações online.
                     Ele combina diferentes tecnologias para estruturar conteúdos, definir estilos e criar
                     interatividade.
-                    É graças a ele que podemos navegar, interagir e consumir informações na internet de forma simples e
-                    acessível.
                 </p>
                 <p>
                     As três tecnologias fundamentais são:
@@ -145,19 +163,311 @@
                     web.
                 </p>
             </article>
-
-            <!-- Imagem ilustrativa -->
             <div class="intro-img">
                 <img src="Images/WEB.jpeg" alt="Ícone Desenvolvimento Web">
             </div>
         </section>
 
+        <!-- Seção HTML – Introdução -->
+        <section id="html-intro" class="technology-section container my-5 p-4 rounded shadow">
+
+            <h2 class="tech-title">HTML – A estrutura invisível que sustenta a Web:</h2>
+
+            <p>
+                HTML (<b>HyperText Markup Language</b>) é a linguagem padrão para criar páginas e aplicações web. Ele
+                define
+                a <b>estrutura</b> do conteúdo, permitindo organizar textos, imagens, links, listas, tabelas,
+                formulários e muito mais.
+            </p>
+            <br>
+            <p>
+                O HTML é usado para:
+            <ul>
+                <li>Estruturar conteúdos em títulos, parágrafos e seções.</li>
+                <li>Inserir imagens, vídeos, áudios e outros elementos multimídia.</li>
+                <li>Criar links entre páginas e sites.</li>
+                <li>Formulários para entrada de dados dos usuários.</li>
+                <li>Construir a base sobre a qual CSS e JavaScript atuam.</li>
+            </ul>
+            </p>
+
+            <p>
+                Principais tags e estruturas:
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code> – Declaração do tipo de documento.</li>
+                <li><code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> e <code>&lt;body&gt;</code> – Estrutura básica
+                    da página.</li>
+                <li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+                    <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code> – Elementos
+                    semânticos.
+                </li>
+                <li><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> – Títulos e Subtítulos.</li>
+                <li><code>&lt;p&gt;</code> – Parágrafos de texto.</li>
+                <li><code>&lt;a&gt;</code> – Links.</li>
+                <li><code>&lt;img&gt;</code> – Imagens.</li>
+                <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> – Listas.</li>
+            </ul>
+            </p>
+
+            <div class="html-video text-center my-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ok-plXXHlWw?si=WmLRxz4li2b07kxs"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <p>
+                Para mais detalhes, consulte a documentação oficial do HTML:
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN HTML</a> |
+                <a href="https://www.w3.org/TR/html52/" target="_blank">W3C HTML</a>
+            </p>
+
+        </section>
+
+        <!-- HTML Mini Site -->
+        <section id="html" class="technology-section container my-5 p-4 rounded shadow">
+            <h2 class="tech-title">Mini Site com HTML</h2>
+
+            <p>
+                Já que o HTML cria a <b>estrutura</b> da página, vamos montar um mini site simples, com header, nav,
+                main e
+                footer:
+            </p>
+
+            <div id="mini-site-html">
+                <header>
+                    <h1>Meu Mini Site</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <main>
+                    <section>
+                        <h2>Bem-vindo!</h2>
+                        <p>Este é um mini site construído apenas com HTML.</p>
+                    </section>
+                    <section>
+                        <h2>Sobre</h2>
+                        <p>Aqui temos apenas o esqueleto do nosso mini site, sem nenhuma estilização.</p>
+                    </section>
+                </main>
+                <footer id="footer-html">
+                    <p>&copy; 2025 Meu Mini Site</p>
+                </footer>
+            </div>
+
+        </section>
+
+        <!-- Seção CSS – Introdução -->
+        <section id="css-intro" class="technology-section container my-5 p-4 rounded shadow">
+
+            <h2 class="tech-title">CSS – O estilo que transforma ideias em design:</h2>
+
+            <p>
+                CSS (<b>Cascading Style Sheets</b>) é a linguagem responsável pelo <b>estilo</b> das páginas web.
+                Enquanto o HTML define a estrutura, o CSS controla cores, fontes, espaçamento, layout e efeitos visuais,
+                tornando a interface atraente e organizada.
+            </p>
+            <br>
+            <p>
+                CSS é usado para:
+            <ul>
+                <li>Definir cores, fontes, tamanhos e espaçamentos de elementos.</li>
+                <li>Organizar conteúdos em layouts responsivos e adaptáveis a diferentes telas.</li>
+                <li>Aplicar efeitos visuais como sombras, gradientes, transições e animações.</li>
+                <li>Controlar visibilidade de elementos e comportamentos interativos.</li>
+                <li>Separar completamente a aparência do conteúdo, tornando o código mais limpo e reutilizável.</li>
+            </ul>
+            </p>
+
+            <p>
+                Principais conceitos e estruturas:
+            <ul>
+                <li><code>seletor { propriedade: valor; }</code> – Estrutura básica de regras CSS.</li>
+                <li>Seletores de elementos, classes e IDs para aplicar estilos específicos.</li>
+                <li>Pseudo-classes (<code>:hover</code>, <code>:focus</code>) e pseudo-elementos (<code>::before</code>,
+                    <code>::after</code>).
+                </li>
+                <li>Box Model – Margem, borda, padding e conteúdo.</li>
+                <li>Flexbox e Grid – Para layouts modernos e responsivos.</li>
+                <li>Media Queries – Para adaptar o site a diferentes tamanhos de tela.</li>
+            </ul>
+            </p>
+
+            <div class="css-video text-center my-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OEV8gMkCHXQ?si=OxBTWurnrwoWWEuA"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <p>
+                Para mais detalhes, consulte a documentação oficial do CSS:
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">MDN CSS</a> |
+                <a href="https://www.w3.org/Style/CSS/" target="_blank">W3C CSS</a>
+            </p>
+
+
+        </section>
+
+
+        <!-- CSS Mini Site -->
+        <section id="css" class="technology-section container my-5 p-4 rounded shadow">
+            <h2 class="tech-title">Estilizando o Mini Site com CSS</h2>
+
+            <p>
+                Agora que sabemos para quê serve o CSS, vamos então aplicar estilo ao nosso mini site:
+            </p>
+
+            <div class="mini-site styled-mini-site" id="mini-site-css">
+                <header>
+                    <h1>Meu Mini Site</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <main>
+                    <section>
+                        <h2>Bem-vindo!</h2>
+                        <p>Este é um mini site construído apenas com HTML e estilizado com CSS.</p>
+                    </section>
+                    <section>
+                        <h2>Sobre</h2>
+                        <p>Agora aplicamos estilos no nosso mini site com CSS.</p>
+                    </section>
+                </main>
+                <footer>
+                    <p>&copy; 2025 Meu Mini Site</p>
+                </footer>
+            </div>
+
+
+        </section>
+
+        <!-- Seção JavaScript – Introdução -->
+        <section id="js-intro" class="technology-section container my-5 p-4 rounded shadow">
+
+            <h2 class="tech-title">JavaScript – O motor da interatividade online:</h2>
+
+            <p>
+                JavaScript (JS) é a linguagem de programação que permite adicionar <b>dinamismo</b> e
+                <b>interatividade</b> às páginas web. Ele complementa HTML e CSS, permitindo responder a ações
+                do usuário, atualizar conteúdo sem recarregar a página e criar experiências web complexas.
+            </p>
+            <br>
+            <p>
+                JavaScript é usado para:
+            <ul>
+                <li>Manipular elementos HTML e CSS em tempo real.</li>
+                <li>Validar formulários e interações do usuário.</li>
+                <li>Criar animações e efeitos dinâmicos.</li>
+                <li>Comunicar-se com servidores via AJAX/Fetch API.</li>
+                <li>Desenvolver aplicações completas no lado do cliente (front-end) ou servidor (Node.js).</li>
+            </ul>
+            </p>
+
+            <p>
+                Principais conceitos e estruturas:
+            <ul>
+                <li>Variáveis (<code>let</code>, <code>const</code>, <code>var</code>).</li>
+                <li>Funções e arrow functions (<code>function</code>, <code>() => {}</code>).</li>
+                <li>Eventos (<code>click</code>, <code>input</code>, <code>submit</code>).</li>
+                <li>Manipulação do DOM (<code>document.getElementById()</code>, <code>querySelector()</code>).</li>
+                <li>Condicionais (<code>if</code>, <code>switch</code>) e loops (<code>for</code>, <code>while</code>).
+                </li>
+                <li>Objetos, arrays e métodos associados.</li>
+                <li>Promises e async/await para operações assíncronas.</li>
+            </ul>
+            </p>
+
+            <div class="css-video text-center my-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DHjqpvDnNGE?si=-v4YPI2nQxPF1Pk0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <p>
+                Para mais detalhes, consulte a documentação oficial do JavaScript:
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">MDN JavaScript</a> |
+                <a href="https://www.w3.org/standards/webdesign/script" target="_blank">W3C JavaScript</a>
+            </p>
+
+        </section>
+
+
+        <!-- JS Mini Site -->
+        <section id="js" class="technology-section container my-5 p-4 rounded shadow">
+            <h2 class="tech-title">Interatividade no Mini Site com JavaScript</h2>
+
+            <p>
+                utilizando JavaScript, vamos adicionar um botão que altera o modo de cor do nosso mini site:
+            </p>
+
+            <div class="mini-site styled-mini-site" id="mini-site-js">
+                <button>🌙 Alternar Modo</button>
+                <header>
+                    <h1>Meu Mini Site</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <main>
+                    <section>
+                        <h2>Bem-vindo!</h2>
+                        <p>Este mini site agora tem interatividade usando JavaScript.</p>
+                    </section>
+                    <section>
+                        <h2>Sobre</h2>
+                        <p>Você pode clicar no botão acima para alternar o modo escuro/claro do mini site.</p>
+                    </section>
+                </main>
+                <footer>
+                    <p>&copy; 2025 Meu Mini Site</p>
+                </footer>
+            </div>
+
+        </section>
+
+        <!-- Seção Newsletter -->
+        <section id="newsletter" class="container my-5 p-4 rounded shadow">
+            <h2 class="tech-title text-center">Receba novidades do Guia Dev Web!</h2>
+            <p class="text-center mb-4">
+                Insira seu e-mail abaixo para receber conteúdos, dicas e atualizações sobre desenvolvimento web.
+            </p>
+
+            <form id="newsletter-form"
+                class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+                <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                <button type="submit" class="btn btn-success">Assinar</button>
+            </form>
+
+            <p id="newsletter-msg" class="text-center mt-3" style="display: none;"></p>
+        </section>
 
     </main>
 
-    <footer>
-
+    <!-- Footer -->
+    <footer class="text-center py-3 mt-5">
+        <p>&copy; 2025 GuiaDevWeb - Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script customizado -->
+    <script src="script.js"></script>
 </body>
 
 </html>

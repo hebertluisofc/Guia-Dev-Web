@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+    <title>Projeto</title>
+</head>
+
+<body>
+    <header>
+        <!-- NAV BAR -->
+        <nav class="navbar-dark bg-dark">
+            <div class="nav-bar">
+                <a class="navbar-brand" href="#">
+                    <img id="logo" src="Images/GuiaDevWeb.png" alt="Logomarca Guia Dev Web" width="150rem"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Guia Dev Web</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#intro">Desenvolvimento Web</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">HTML 5</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CSS 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Java Script</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Contato
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn btn-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- FIM DA NAV BAR -->
+    </header>
+
+    <main>
+        <!-- CARROSSEL -->
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Images/CSS.png" class="d-block w-100" alt="CSS">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>CSS 3</h5>
+                        <p>O estilo que transforma ideias em design.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/HTML.png" class="d-block w-100" alt="HTML">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>HTML 5</h5>
+                        <p>A estrutura invisível que sustenta a web.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/JS.png" class="d-block w-100" alt="JS">
+                    <div style="color: black;" class="carousel-caption d-none d-md-block">
+                        <h5>JAVA SCRIPT</h5>
+                        <p>O motor da interatividade online.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- FIM DO CARROSSEL -->
+
+        <!-- Seção Desenvolvimento Web -->
+        <section id="intro" class="intro">
+            <article>
+                <h2>O que é o Desenvolvimento Web?</h2>
+                <p>
+                    O desenvolvimento web é a área responsável pela criação e manutenção de sites e aplicações online.
+                    Ele combina diferentes tecnologias para estruturar conteúdos, definir estilos e criar
+                    interatividade.
+                    É graças a ele que podemos navegar, interagir e consumir informações na internet de forma simples e
+                    acessível.
+                </p>
+                <p>
+                    As três tecnologias fundamentais são:
+                    <b>HTML</b>, que cria a estrutura da página;
+                    <b>CSS</b>, que define o design e a responsividade;
+                    e <b>JavaScript</b>, que traz dinamismo e interatividade.
+                </p>
+                <p>
+                    Aprender essas bases é o primeiro passo para qualquer pessoa que deseja se tornar desenvolvedor(a)
+                    web.
+                </p>
+            </article>
+
+            <!-- Imagem ilustrativa -->
+            <div class="intro-img">
+                <img src="Images/WEB.jpeg" alt="Ícone Desenvolvimento Web">
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

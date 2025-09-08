@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Dev Web</title>
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
 
     <!-- CSS customizado -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="dark-mode">
@@ -22,7 +22,7 @@
         <nav class="navbar fixed-top navbar-dark bg-dark shadow">
             <div class="container-fluid d-flex justify-content-between align-items-center">
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="Images/GuiaDevWeb.png" alt="Logomarca Guia Dev Web" width="120">
+                    <img src="assets/img/GuiaDevWeb.png" alt="Logomarca Guia Dev Web" width="120">
                 </a>
 
                 <div class="d-flex align-items-center">
@@ -45,18 +45,18 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#intro">Desenvolvimento Web</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#dev-web-link">Desenvolvimento Web</a></li>
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                     HTML
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#html-intro">Introdução</a></li>
+                                    <li><a class="dropdown-item" href="#html-intro-link">Introdução</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#html">Mini Site</a></li>
+                                    <li><a class="dropdown-item" href="#mini-site-html-link">Mini Site</a></li>
                                 </ul>
                             </li>
 
@@ -65,11 +65,11 @@
                                     CSS
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#css-intro">Introdução</a></li>
+                                    <li><a class="dropdown-item" href="#css-intro-link">Introdução</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#css">Mini Site</a></li>
+                                    <li><a class="dropdown-item" href="#mini-site-css-link">Mini Site</a></li>
                                 </ul>
                             </li>
 
@@ -78,11 +78,11 @@
                                     JavaScript
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#js-intro">Introdução</a></li>
+                                    <li><a class="dropdown-item" href="#js-intro-link">Introdução</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#js">Mini Site</a></li>
+                                    <li><a class="dropdown-item" href="#mini-site-js-link">Mini Site</a></li>
                                 </ul>
                             </li>
 
@@ -112,24 +112,24 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="Images/CSS.png" class="d-block w-100" alt="CSS">
+                    <img src="assets/img/CSS.png" class="d-block w-100" alt="CSS">
                     <div class="carousel-caption text-dark bg-light bg-opacity-50 rounded">
                         <h5>CSS 3</h5>
-                        <p>O estilo que transforma ideias em design.</p>
+                        <p id="dev-web-link">O estilo que transforma ideias em design.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="Images/HTML.png" class="d-block w-100" alt="HTML">
+                    <img src="assets/img/HTML.png" class="d-block w-100" alt="HTML">
                     <div class="carousel-caption text-dark bg-light bg-opacity-50 rounded">
                         <h5>HTML 5</h5>
-                        <p>A estrutura invisível que sustenta a Web.</p>
+                        <p id="dev-web-link">A estrutura invisível que sustenta a Web.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="Images/JS.png" class="d-block w-100" alt="JavaScript">
+                    <img src="assets/img/JS.png" class="d-block w-100" alt="JavaScript">
                     <div class="carousel-caption text-dark bg-light bg-opacity-50 rounded">
                         <h5>JavaScript</h5>
-                        <p>O motor da interatividade online.</p>
+                        <p id="dev-web-link">O motor da interatividade online.</>
                     </div>
                 </div>
             </div>
@@ -163,11 +163,16 @@
                     web.
                 </p>
             </article>
-            <div class="intro-img">
-                <img src="Images/WEB.jpeg" alt="Ícone Desenvolvimento Web">
+
+            <div class="video-container" id="dev-web-video">
+                <iframe src="https://www.youtube.com/embed/kirjakF8yh4?si=eCyHyxvH_kkTj3YK" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
 
+        <span id="html-intro-link"></span>
         <!-- Seção HTML – Introdução -->
         <section id="html-intro" class="technology-section container my-5 p-4 rounded shadow">
 
@@ -209,14 +214,14 @@
             </ul>
             </p>
 
-            <div class="html-video text-center my-3">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ok-plXXHlWw?si=WmLRxz4li2b07kxs"
-                    title="YouTube video player" frameborder="0"
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ok-plXXHlWw?si=WmLRxz4li2b07kxs" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
-            <p>
+            <p id="mini-site-html-link">
                 Para mais detalhes, consulte a documentação oficial do HTML:
                 <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN HTML</a> |
                 <a href="https://www.w3.org/TR/html52/" target="_blank">W3C HTML</a>
@@ -233,15 +238,15 @@
                 main e
                 footer:
             </p>
-
+            <hr>
             <div id="mini-site-html">
                 <header>
                     <h1>Meu Mini Site</h1>
                     <nav>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#mini-site-html-link">Home</a></li>
+                            <li><a href="#mini-site-html-link">Sobre</a></li>
+                            <li><a href="#mini-site-html-link">Contato</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -256,10 +261,10 @@
                     </section>
                 </main>
                 <footer id="footer-html">
-                    <p>&copy; 2025 Meu Mini Site</p>
+                    <p id="css-intro-link">&copy; 2025 Meu Mini Site</p>
                 </footer>
             </div>
-
+            <hr>
         </section>
 
         <!-- Seção CSS – Introdução -->
@@ -298,14 +303,14 @@
             </ul>
             </p>
 
-            <div class="css-video text-center my-3">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/OEV8gMkCHXQ?si=OxBTWurnrwoWWEuA"
-                    title="YouTube video player" frameborder="0"
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/OEV8gMkCHXQ?si=OxBTWurnrwoWWEuA" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
-            <p>
+            <p id="mini-site-css-link">
                 Para mais detalhes, consulte a documentação oficial do CSS:
                 <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">MDN CSS</a> |
                 <a href="https://www.w3.org/Style/CSS/" target="_blank">W3C CSS</a>
@@ -322,15 +327,15 @@
             <p>
                 Agora que sabemos para quê serve o CSS, vamos então aplicar estilo ao nosso mini site:
             </p>
-
+            <hr>
             <div class="mini-site styled-mini-site" id="mini-site-css">
                 <header>
                     <h1>Meu Mini Site</h1>
                     <nav>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#mini-site-css-link">Home</a></li>
+                            <li><a href="#mini-site-css-link">Sobre</a></li>
+                            <li><a href="#mini-site-css-link">Contato</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -345,11 +350,10 @@
                     </section>
                 </main>
                 <footer>
-                    <p>&copy; 2025 Meu Mini Site</p>
+                    <p id="js-intro-link">&copy; 2025 Meu Mini Site</p>
                 </footer>
             </div>
-
-
+            <hr>
         </section>
 
         <!-- Seção JavaScript – Introdução -->
@@ -388,14 +392,14 @@
             </ul>
             </p>
 
-            <div class="css-video text-center my-3">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/DHjqpvDnNGE?si=-v4YPI2nQxPF1Pk0"
-                    title="YouTube video player" frameborder="0"
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/DHjqpvDnNGE?si=-v4YPI2nQxPF1Pk0" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
-            <p>
+            <p id="mini-site-js-link">
                 Para mais detalhes, consulte a documentação oficial do JavaScript:
                 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">MDN JavaScript</a> |
                 <a href="https://www.w3.org/standards/webdesign/script" target="_blank">W3C JavaScript</a>
@@ -409,18 +413,18 @@
             <h2 class="tech-title">Interatividade no Mini Site com JavaScript</h2>
 
             <p>
-                utilizando JavaScript, vamos adicionar um botão que altera o modo de cor do nosso mini site:
+                Utilizando JavaScript, vamos adicionar um botão que altera o modo de cor do nosso mini site:
             </p>
-
+            <hr>
             <div class="mini-site styled-mini-site" id="mini-site-js">
                 <button>🌙 Alternar Modo</button>
                 <header>
                     <h1>Meu Mini Site</h1>
                     <nav>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#mini-site-js-link">Home</a></li>
+                            <li><a href="#mini-site-js-link">Sobre</a></li>
+                            <li><a href="#mini-site-js-link">Contato</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -438,7 +442,7 @@
                     <p>&copy; 2025 Meu Mini Site</p>
                 </footer>
             </div>
-
+            <hr>
         </section>
 
         <!-- Seção Newsletter -->
@@ -460,14 +464,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center py-3 mt-5">
+    <footer id="main-footer" class="text-center py-3 mt-5">
         <p>&copy; 2025 GuiaDevWeb - Todos os direitos reservados.</p>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script customizado -->
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
